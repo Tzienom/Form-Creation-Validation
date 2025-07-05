@@ -1,20 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registration-form");
   const feedbackDiv = document.getElementById("form-feedback");
-  const usernameInput = document.getElementById("username");
-  const emailInput = document.getElementById("email");
-  const passwordInput = document.getElementById("password");
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const username = usernameInput.value.trim();
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
-
-    console.log(
-      `Username: ${username}\nEmail: ${email}\nPassword: ${password}`
-    );
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
 
     let isValid = true;
     let messages = [];
